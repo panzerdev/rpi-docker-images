@@ -9,7 +9,7 @@ WORKDIR app
 RUN 	apt-get update \
 	&& apt-get install wget -y \
 	&& mkdir tmp \
-	&& wget "https://github.com/mholt/caddy/releases/download/v0.10.11/caddy_${VERSION}_linux_arm7.tar.gz" -O tmp/caddy.tar.gz \
+	&& wget "https://github.com/mholt/caddy/releases/download/${VERSION}/caddy_${VERSION}_linux_arm7.tar.gz" -O tmp/caddy.tar.gz \
 	&& tar -xzf tmp/caddy.tar.gz -C tmp \
 	&& mv tmp/caddy . \
 	&& rm -rf tmp \
